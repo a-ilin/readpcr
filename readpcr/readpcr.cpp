@@ -110,7 +110,7 @@ int main()
         {
             char num[10];
             snprintf(num, sizeof(num), "%02d", i);
-            std::cout << "PCR" << num << ' ';
+            std::cout << "PCR-" << num << ':';
 
             for ( int k = 0; k < sizeof(ReadPcrReply.pcr_value); ++k )
             {
@@ -118,7 +118,7 @@ int main()
                 std::cout << ' ' << num;
             }
 
-            std::cout << std::endl;
+            std::cout << ' ' << std::endl;
         }
     }
 
